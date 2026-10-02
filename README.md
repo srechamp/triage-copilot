@@ -6,30 +6,7 @@ An LLM-powered incident triage assistant for Kubernetes. When a Prometheus alert
 
 ## Architecture
 
-```
-┌──────────────────────────────────────────────────────────┐
-│                  Kubernetes cluster                       │
-│                (GitOps deploy via ArgoCD)                 │
-│                                                          │
-│  ┌──────────────────┐    ┌──────────────────┐           │
-│  │ Demo microservices│───▶│ Prometheus stack  │           │
-│  │  (chaos targets)  │    │ (Alertmanager     │           │
-│  └──────────────────┘    │  webhook)         │           │
-│                          └────────┬─────────┘           │
-│                                   │                      │
-│  ┌──────────────────┐    ┌────────▼─────────┐           │
-│  │  Vector store     │───▶│  Triage engine   │           │
-│  │ (runbook chunks)  │    │  (Python/FastAPI) │──────┐    │
-│  └──────────────────┘    └──────────────────┘      │    │
-│                                                     │    │
-└─────────────────────────────────────────────────────┼────┘
-                                                      │
-                          ┌───────────┐    ┌──────────▼──┐
-                          │ Claude API│◀───│    Slack     │
-                          │ (reasoning)│    │ (report +    │
-                          └───────────┘    │  approval)   │
-                                           └─────────────┘
-```
+![alt text](images/tri-co-arch_diagram.png)
 
 ## Quickstart (Beta)
 
