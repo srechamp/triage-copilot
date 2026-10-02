@@ -6,7 +6,7 @@ An LLM-powered incident triage assistant for Kubernetes. When a Prometheus alert
 
 ## Architecture
 
-![alt text](images/tri-co-arch_diagram.png)
+![alt text](../triage-copilot/images/tri-co-arch_diagram.png)
 
 ## Quickstart (Beta)
 
