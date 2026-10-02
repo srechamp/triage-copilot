@@ -70,25 +70,6 @@ These are intentional trade-offs, not defaults - the kind of reasoning an archit
 | **GitOps app-of-apps** | The entire platform is declarative. Disaster recovery = `argocd app sync` on a fresh cluster. Timed recovery is a measurable SRE metric. |
 | **Chaos ↔ Alert ↔ Runbook triads** | Every chaos experiment maps to exactly one alert rule and one runbook. This makes the system testable and the demo reproducible. |
 
-## Project status
-
-- [x] Session 1: Repo scaffold, kind cluster, ArgoCD bootstrap, app-of-apps
-- [ ] Session 2: kube-prometheus-stack deployed, Grafana accessible, webhook firing
-- [ ] Session 3: Go demo services with /metrics and OTel traces
-- [ ] Session 4: Alert rules (crash-loop, error rate, latency, OOM) proven with manual faults
-- [ ] Session 5: Triage engine webhook, alert parsing, Slack notification (no LLM)
-- [ ] Session 6: Enrichment fan-out (K8s API, Prometheus, logs)
-- [ ] Session 7: Claude API integration, JSON-schema triage output
-- [ ] Session 8: Retries, dedup, ConfigMap-driven config, engine deployed via ArgoCD
-- [ ] Session 9: Runbook corpus, indexer job, pgvector
-- [ ] Session 10: RAG wired into triage prompt
-- [ ] Session 11: Action whitelist, Slack Approve/Deny buttons, audit log
-- [ ] Session 12: Chaos Mesh, experiment CRDs, `make demo` end-to-end
-- [ ] Session 13: OTel instrumentation of LLM calls, Prometheus metrics, LLM dashboard
-- [ ] Session 14: Slack feedback loop, eval script for prompt regression
-- [ ] Session 15: README polish, demo GIF, design decisions
-- [ ] Session 16: Loom video, LinkedIn write-up, resume update
-
 ## License
 
 MIT
